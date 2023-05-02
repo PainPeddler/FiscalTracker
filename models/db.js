@@ -14,4 +14,4 @@ const sequelize = new Sequelize(process.env.DB_DATABASE, process.env.DB_USERNAME
     logging: false
 });
 
-modules.exports = sequelize;
+module.exports = sequelize;
