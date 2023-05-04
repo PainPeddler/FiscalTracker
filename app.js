@@ -1,4 +1,4 @@
-const db = require("./models/db");
+const db = require("./config/connection");
 const express = require('express');
 const app = express();
 const port = 3000;
