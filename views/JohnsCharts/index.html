@@ -32,7 +32,7 @@
                        'height':600};//control size of chart here
 
         // Instantiate and draw our chart, passing in some options.
-        var chart = new google.visualization.BarChart(document.getElementById('chart_div')); //change this function to "google.visualization.BarChart" if a bar char is desired
+        var chart = new google.visualization.BarChart(document.getElementById('BarChart_div')); //change this function to "google.visualization.BarChart" if a bar char is desired
         chart.draw(data, options);
       }
     </script>
@@ -40,6 +40,6 @@
 
   <body>
     <!--Div that will hold the pie/bar chart-->
-    <div id="chart_div"></div>
+    <div id="BarChart_div"></div>
   </body>
 </html>
