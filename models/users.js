@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 const { DataTypes } = require('sequelize');
 const sequelize = require('../config/database');
 const bcrypt = require('bcrypt');
@@ -47,3 +48,5 @@ User.beforeCreate((users, options) => {
 });
 
 module.exports = User;
+=======
+>>>>>>> parent of 2d771bb (Made users model and hashed password before it is saved to DB)

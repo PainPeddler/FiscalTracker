@@ -31,7 +31,7 @@ Model.init(
         },
 
         notes:{
-            type: DataTypes.TEXT,
+            type: DataTypes.STRING,
             allowNull:true
         },
 

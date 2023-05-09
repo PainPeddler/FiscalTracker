@@ -1,17 +1,17 @@
 [
     {
-      "category_id": "1",  //gas
+      "category_id": "1",  
       "period_start": 01-10-2019,
-      "period_end": 02/09/2019,
-      "amount": $200,
-      "notes":  gas_expenses,
+      "period_end": 02-09-2019,
+      "amount": 200,
+      "notes":  'gas_expenses',
     },
     {
       "category_id": "2",  //groceries
-      "period_start": 01/23/20
-      "period_end": 11/06/2009
-      "amount": $5000 
-      "notes": 
+      "period_start": 01-23-2020,
+      "period_end": 11-06-2020,
+      "amount": 5000 ,
+      "notes": groceries
     },
     {
       "category_id": "3",  //electricity and water
