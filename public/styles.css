@@ -6,12 +6,50 @@ h1 {
     
 form {
   display: flex;
-  flex-direction: column;
   justify-content: center;
   align-items: center;
-  /* height: 100vh; */
+  text-align: center;
+  flex-direction: column;
   border: solid black;
-  margin-left: auto;
-  margin-right: auto;
-  padding-bottom: 5px;
+  margin: auto;
+  max-width: 500px;
+  padding: 2px;
+  box-shadow: 0 0 15px rgba(1, 1, 1, 1);
+}
+
+.events {
+  display: flex;
+  padding-left: 25px;
+  padding-right: 25px;
+  padding-bottom: 10px;
+  align-items: center;
+  text-align: center;
+}
+
+.events-paragraph {
+  font-family: 'optima', 'Lucida Sans Regular',sans-serif;
+  font-weight: bold;
+  padding: 75px;
+}
+
+.register-btn {
+  margin-top: 10px;
+  padding: 10px;
+  border: solid black;
+  border-radius: 10px;
+  background-color: greenyellow;
+}
+
+.events-img {
+  width: 650px;
+  height: auto;
+  border-radius: 10px;
+}
+
+.events-title {
+  display: flex;
+  justify-content: center;
+  padding-top: 15px;
+  font-size: 1.5em;
+  font-weight: bold;
 }
