@@ -2,7 +2,7 @@ const { DataTypes } = require('sequelize');
 const sequelize = require('../config/database');
 const bcrypt = require('bcrypt');
 
-const Users = sequelize.define('Users', {
+const User = sequelize.define('Users', {
     id: {
         type: DataTypes.INTEGER,
         primaryKey: true,
@@ -23,10 +23,19 @@ const Users = sequelize.define('Users', {
         allowNull: false,
         unique: true
     },
+    
+},
+
+{
+    sequelize,
+    timestamps: false,
+    freezeTableName: true,
+    underscored: true,
+    modelName: 'user'
 });
 
 // Hashing the user's password before it's saved to DB
-Users.beforeCreate((users, options) => {
+User.beforeCreate((users, options) => {
     // hash the user's password with 10 rounds of salt
     return bcrypt.hash(users.password, 10)
         .then(hash => {
@@ -37,4 +46,4 @@ Users.beforeCreate((users, options) => {
         });
 });
 
-module.exports = Users;
+module.exports = User;

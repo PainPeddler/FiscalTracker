@@ -16,7 +16,7 @@ CREATE TABLE Transactions (
     user_id INT NOT NULL,
     description VARCHAR(255) NOT NULL,
     amount DECIMAL(10, 2) NOT NULL,
-    date DATE NOT NULL,
+    transact_date DATE NOT NULL,
     PRIMARY KEY (id),
     FOREIGN KEY (user_id) REFERENCES Users(id)
 );
