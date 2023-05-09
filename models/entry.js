@@ -23,5 +23,14 @@ Entry.init (
             type: DataTypes.DECIMAL(10, 2),
             allowNull: false,
         }
+    },
+    {
+    sequelize,
+    timestamps: false,
+    freezeTableName: true,
+    underscored: true,
+    modelName: 'entry',
     }
 )
+
+module.exports = Entry;
