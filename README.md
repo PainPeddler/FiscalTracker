@@ -16,13 +16,18 @@
 
 ## Installation
 
-  
+  Just navigate to the homepage [here](https://git.heroku.com/fiscal-tracker.git), register, and get started saving!
+
+## Contributing
+
+- John Metzger
+- Jacob Sniff
+- Georgina Xavier
 
 ## Usage
 
- 
-
-  ![Screenshot](pics/screenshot.png)
+  ![Homepage](/public/pics/home.png)
+  ![Profile](/public/pics/profile.png)
   
 ## License
 
@@ -30,3 +35,5 @@ This project is licensed under the terms of the [MIT license](https://opensource
     
 
 ## Questions
+
+If you have any questions or concerns regarding this application please contact one of the developers via github. [Repository](https://github.com/PainPeddler/FiscalTracker)
