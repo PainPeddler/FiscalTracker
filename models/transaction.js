@@ -1,7 +1,7 @@
 const{Model,DataTypes}=require('sequelize');
 const sequelize=require('../config/connection');
 
-const Transaction extends Model{}
+class Transaction extends Model{}
 Model.Init(
     {
         id:

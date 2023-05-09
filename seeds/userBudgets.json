@@ -1,0 +1,52 @@
+[
+    {
+      "category_id": "1",  //gas
+      "period_start": 01-10-2019,
+      "period_end": 02/09/2019,
+      "amount": $200,
+      "notes":  gas_expenses,
+    },
+    {
+      "category_id": "2",  //groceries
+      "period_start": 01/23/20
+      "period_end": 11/06/2009
+      "amount": $5000 
+      "notes": 
+    },
+    {
+      "category_id": "3",  //electricity and water
+      "period_start": 01/10/2009
+      "period_end": 11/06/2009
+      "amount": $5000 
+      "notes": 
+    },
+    {
+      "category_id": "4",  //medical expenses
+      "period_start": 01/10/2009
+      "period_end": 11/06/2009
+      "amount": $5000 
+      "notes": 
+    },
+    {
+      "category_id": "5",  //car loan
+      "period_start": 01/10/2009
+      "period_end": 11/06/2009
+      "amount": $5000 
+      "notes": 
+    },
+    {
+      "category_id": "6",
+      "period_start": 01/10/2009
+      "period_end": 11/06/2009
+      "amount": $5000 
+      "notes": 
+    },
+    {
+      "category_id": "1",
+      "period_start": 01/10/2009
+      "period_end": 11/06/2009
+      "amount": $5000 
+      "notes": 
+    }
+]
+

@@ -15,13 +15,13 @@ Model.init(
 
         period_start:{
             
-            type: DataTypes.timestamps,
+            type: DataTypes.DATE,
             allowNull:false
         },
 
         period_end:{
             
-            type: DataTypes.timestamps,
+            type: DataTypes.DATE,
             allowNull:false
         },
 

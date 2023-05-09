@@ -1,7 +1,8 @@
 const User=require('./user');
 const Transaction=require('./transaction');
 const Entry=require('./entry');
-const Category=require('./category');
+const ExpenseCategory=require('./expense-category');
+const IncomeCategory=require('./income-category');
 const Budget=require('./budget')
 
 User.hasMany(Transaction,{
@@ -22,19 +23,37 @@ Transaction.hasMany(User,{
     as: 'transaction_and_users'
 });
 
-Category.belongsToMany(Budget,{
+expenseCategory.belongsToMany(Budget,{
     through:{
         model:Transaction,
         unique:false
     },
-    as:'Budget_category'
+    as:'expenseBudget_category'
 });
 
-Budget.belongsToOne(Category,{
+incomeCategory.belongsToMany(Budget,{
     through:{
         model:Transaction,
         unique:false
     },
-    as: 'User_Budget'
+    as:'incomeBudget_category'
+});
+
+
+Budget.belongsToOne(expenseCategory,{
+    through:{
+        model:Transaction,
+        unique:false
+    },
+    as: 'User_ExpenseBudget'
+    
+});
+
+Budget.belongsToOne(incomeCategory,{
+    through:{
+        model:Transaction,
+        unique:false
+    },
+    as: 'User_IncomeBudget'
     
 });
