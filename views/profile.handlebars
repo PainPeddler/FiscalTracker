@@ -1,0 +1,181 @@
+<head>
+      <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+      <script type="text/javascript">
+        google.charts.load('current', {'packages':['corechart']});
+        google.charts.setOnLoadCallback(drawChart);
+  
+        function drawChart() {
+          var data = google.visualization.arrayToDataTable([
+            ['Year', 'Income', 'Expenses', 'Gross'], // these are the names for the graph values; x,y1,y2,y3
+            ['2004',  1000,      400, 600], // actual values [x, y1,y2,y3] --note gross(y3) is income minus expenses
+            ['2005',  1170,      460, 1170-460+600],
+            ['2006',  660,       1120, 660-1120+1170-460+600],
+            ['2007',  1030,      540, 1030-540+660-1120+1170-460+600]
+          ]);
+  
+          var options = {
+            title: 'Total Finances', //title of chart appears at top
+            curveType: 'function', //controls curvature of line. likely does not need to be modified
+            legend: { position: 'bottom' } //controls the position where the legend appears on chart
+          };
+  
+          var chart = new google.visualization.LineChart(document.getElementById('curve_chart')); 
+  
+          chart.draw(data, options);
+        }
+        
+      </script>
+   <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <script type="text/javascript">
+
+      // Load the Visualization API and the corechart package.
+      google.charts.load('current', {'packages':['corechart']});
+
+      // Set a callback to run when the Google Visualization API is loaded.
+      google.charts.setOnLoadCallback(drawChart);
+
+      // Callback that creates and populates a data table,
+      // instantiates the pie chart, passes in the data and
+      // draws it.
+      function drawChart() {
+
+        // Create the data table.
+        var data = new google.visualization.DataTable();
+        data.addColumn('string', 'Expense'); //type of input, label of value. in this case it is the name of the expense
+        data.addColumn('number', '$'); //type of input, label of the value. in this case it is number for money
+        data.addRows([
+          ['Gasoline', 90], //hard coded. database variable entries will go here
+          ['Groceries', 120],
+          ['Rent', 70],
+        ]);
+
+        // Set chart options
+        var options = {'title':'Expenses (USD)', //title of chart appears at top
+                       'width':800,
+                       'height':600};//control size of chart here
+
+        // Instantiate and draw our chart, passing in some options.
+        var chart = new google.visualization.BarChart(document.getElementById('BarChart_div')); //change this function to "google.visualization.BarChart" if a bar char is desired
+        chart.draw(data, options);
+      }
+    </script>
+
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <script type="text/javascript">
+
+      // Load the Visualization API and the corechart package.
+      google.charts.load('current', {'packages':['corechart']});
+
+      // Set a callback to run when the Google Visualization API is loaded.
+      google.charts.setOnLoadCallback(drawChart);
+
+      // Callback that creates and populates a data table,
+      // instantiates the pie chart, passes in the data and
+      // draws it.
+      function drawChart() {
+
+        // Create the data table.
+        var data = new google.visualization.DataTable();
+        data.addColumn('string', 'Expense'); //type of input, label of value. in this case it is the name of the expense
+        data.addColumn('number', '$'); //type of input, label of the value. in this case it is number for money
+        data.addRows([
+          ['Gasoline', 90], //hard coded. database variable entries will go here
+          ['Groceries', 120],
+          ['Rent', 70],
+        ]);
+
+        // Set chart options
+        var options = {'title':'Expenses (USD)', //title of chart appears at top
+                       'width':800,
+                       'height':600};//control size of chart here
+
+        // Instantiate and draw our chart, passing in some options.
+        var chart = new google.visualization.PieChart(document.getElementById('PieChart_div')); //change this function to "google.visualization.BarChart" if a bar char is desired
+        chart.draw(data, options);
+      }
+    </script>
+    </head>
+
+<nav class="bg-white border-gray-200 dark:bg-gray-900">
+  <div class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
+    <a class="flex items-center">
+        <img src="https://cdn.imgbin.com/2/0/13/imgbin-computer-icons-business-bar-chart-icon-design-business-PmhFt8hSkueBAZwsXsJEnndnG.jpg" class="h-8 mr-3" alt="Flowbite Logo" />
+        <span class="self-center text-2xl font-semibold whitespace-nowrap dark:text-white">Fiscal Tracker</span>
+    </a>
+    <button data-collapse-toggle="navbar-default" type="button" class="inline-flex items-center p-2 ml-3 text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600" aria-controls="navbar-default" aria-expanded="false">
+      <span class="sr-only">Open main menu</span>
+      <svg class="w-6 h-6" aria-hidden="true" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 15a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z" clip-rule="evenodd"></path></svg>
+    </button>
+    <div class="hidden w-full md:block md:w-auto" id="navbar-default">
+      <ul class="font-medium flex flex-col p-4 md:p-0 mt-4 border border-gray-100 rounded-lg bg-gray-50 md:flex-row md:space-x-8 md:mt-0 md:border-0 md:bg-white dark:bg-gray-800 md:dark:bg-gray-900 dark:border-gray-700">
+        <li>
+          <a href="#expenses" class="block py-2 pl-3 pr-4 text-white bg-blue-700 rounded md:bg-transparent md:text-blue-700 md:p-0 dark:text-white md:dark:text-blue-500" aria-current="page">Expenses</a>
+        </li>
+        <li>
+          <a href="#" class="block py-2 pl-3 pr-4 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">Income</a>
+        </li>
+        <li>
+          <a href="#" class="block py-2 pl-3 pr-4 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">Gross</a>
+        </li>
+        <li>
+          <a href="#" class="block py-2 pl-3 pr-4 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">New Entry</a>
+        </li>
+        <li>
+          <a href="#" class="block py-2 pl-3 pr-4 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">Delete an Entry</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+<button type="button" class="text-white bg-blue-700 hover:bg-blue-800 focus:outline-none focus:ring-4 focus:ring-blue-300 font-medium rounded-full text-sm px-5 py-2.5 text-center mr-2 mb-2 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">Daily</button>
+<button type="button" class="text-white bg-blue-700 hover:bg-blue-800 focus:outline-none focus:ring-4 focus:ring-blue-300 font-medium rounded-full text-sm px-5 py-2.5 text-center mr-2 mb-2 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">Weekly</button>
+<button type="button" class="text-white bg-blue-700 hover:bg-blue-800 focus:outline-none focus:ring-4 focus:ring-blue-300 font-medium rounded-full text-sm px-5 py-2.5 text-center mr-2 mb-2 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">Monthly</button>
+<button type="button" class="text-white bg-blue-700 hover:bg-blue-800 focus:outline-none focus:ring-4 focus:ring-blue-300 font-medium rounded-full text-sm px-5 py-2.5 text-center mr-2 mb-2 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">Annual</button>
+<div id="timeBtn">
+<button type="button" onclick="toggleBarChart()" class="focus:outline-none text-white bg-red-700 hover:bg-red-800 focus:ring-4 focus:ring-red-300 font-medium rounded-lg text-sm px-5 py-2.5 mr-2 mb-2 dark:bg-red-600 dark:hover:bg-red-700 dark:focus:ring-red-900">Bar</button>
+<button type="button" onclick="togglePieChart()"class="focus:outline-none text-white bg-red-700 hover:bg-red-800 focus:ring-4 focus:ring-red-300 font-medium rounded-lg text-sm px-5 py-2.5 mr-2 mb-2 dark:bg-red-600 dark:hover:bg-red-700 dark:focus:ring-red-900">Pie</button>
+<button type="button" onclick="toggleCurveChart()"class="focus:outline-none text-white bg-red-700 hover:bg-red-800 focus:ring-4 focus:ring-red-300 font-medium rounded-lg text-sm px-5 py-2.5 mr-2 mb-2 dark:bg-red-600 dark:hover:bg-red-700 dark:focus:ring-red-900">Line</button>
+</div>
+<script>
+
+function toggleCurveChart() {
+  var x = document.getElementById("curve_chart");
+  if (x.style.visibility === "hidden") {
+    x.style.visibility = "visible";
+    x.style.width = "900px";
+    x.style.height = "500px";
+  } else {
+    x.style.visibility = "hidden";
+  }
+}
+function toggleBarChart() {
+  var x = document.getElementById("BarChart_div");
+  if (x.style.visibility === "hidden") {
+    x.style.visibility = "visible";
+    x.style.width = "900px";
+    x.style.height = "500px";
+  } else {
+    x.style.visibility = "hidden";
+  }
+}
+function togglePieChart() {
+  var x = document.getElementById("PieChart_div");
+  if (x.style.visibility === "hidden") {
+    x.style.visibility = "visible";
+    x.style.width = "900px";
+    x.style.height = "500px";
+  } else {
+    x.style.visibility = "hidden";
+  }
+}
+</script>
+<html>
+    
+    <body>
+        <div id = "charts">
+      <div id="curve_chart" style="width: 900px; height: 500px" visibility = "hidden"></div> <!--controls size of the chart-->
+      <div id="BarChart_div"></div>
+      <div id="PieChart_div"></div>
+      </div>
+    </body>
+  </html>
